@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-//@EnableEurekaClient
+@EnableEurekaClient
 public class ClientAdminMs1Application {
 
 	public static void main(String[] args) {
@@ -30,15 +30,15 @@ public class ClientAdminMs1Application {
 	}
 	
 }
-//    @Configuration
-//    class RestTemplateConfig {
-//            
-//            @Bean
-//            //@LoadBalanced
-//            public RestTemplate restTemplate() {
-//              return new RestTemplate();
-//            }
-   //}
+    @Configuration
+    class RestTemplateConfig {
+            
+            @Bean
+            //@LoadBalanced
+            public RestTemplate restTemplate() {
+              return new RestTemplate();
+            }
+   }
 
 	
 	

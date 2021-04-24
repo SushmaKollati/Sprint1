@@ -21,6 +21,16 @@ public class AdminServiceImpl implements AdminService{
 	@Autowired
 	adminDao sr;
 	
+	/****************************************************************************************************************************
+	 - Method Name      : createAdminService
+	 - Input Parameters : Admin s
+	 - Return type      : String
+	 - Author           : Capgemini
+	 - Creation Date    : 19-04-2021
+	 - Description      : Create the Admin information entered by Admin and store into  the database.
+	  ****************************************************************************************************************************/ 
+
+	
 	//create admin service
 	@Override
 	public Admin createAdminService(Admin s) {
@@ -31,6 +41,16 @@ public class AdminServiceImpl implements AdminService{
 		logger.info("create admin service");
 		return a;
 	}
+	
+	/****************************************************************************************************************************
+	 - Method Name      : viewAdminByIdService
+	 - Input Parameters : long id
+	 - Return type      : Admin
+	 - Author           : Capgemini
+	 - Creation Date    : 19-04-2021
+	 - Description      : view the Admin information entered by Admin from the database.
+	  ****************************************************************************************************************************/ 
+	
 
 	//view admin by id service
 	@Override
@@ -43,6 +63,17 @@ public class AdminServiceImpl implements AdminService{
 		}
 		return a;
 	}
+
+	
+	
+	/****************************************************************************************************************************
+	 - Method Name      : updateAdminService
+	 - Input Parameters : Admin s, long id
+	 - Return type      : Admin
+	 - Author           : Capgemini
+	 - Creation Date    : 19-04-2021
+	 - Description      : update the Admin information entered by Admin and store into  the database.
+	  ****************************************************************************************************************************/ 
 
 	//update admin service
 	@Override
@@ -57,6 +88,14 @@ public class AdminServiceImpl implements AdminService{
 		return updatedA;
 	}
 
+	/****************************************************************************************************************************
+	 - Method Name      : deleteAdminByIdService
+	 - Input Parameters : long id
+	 - Return type      : Boolean
+	 - Author           : Capgemini
+	 - Creation Date    : 19-04-2021
+	 - Description      : Delete the Admin information entered by Admin and from  the database.
+	  ****************************************************************************************************************************/ 
 	
 	//delete admin by id service
 	@Override
@@ -73,6 +112,18 @@ public class AdminServiceImpl implements AdminService{
 		else
 			return true;	
 	}
+	
+
+	/****************************************************************************************************************************
+	 - Method Name      : listAllAdminService
+	 - Input Parameters :
+	 - Return type      : List<Admin>
+	 - Author           : Capgemini
+	 - Creation Date    : 19-04-2021
+	 - Description      : view all the Admin information from  the database.
+	  ****************************************************************************************************************************/ 
+	
+
 
 	//list all admin service
 	@Override
@@ -81,6 +132,17 @@ public class AdminServiceImpl implements AdminService{
 		return sr.findAll();
 	}
 
+	
+	/****************************************************************************************************************************
+	 - Method Name      : authAdmin
+	 - Input Parameters : String emailId, String pass
+	 - Return type      :Admin
+	 - Author           : Capgemini
+	 - Creation Date    : 19-04-2021
+	 - Description      : authenticate the Admin information entered by Admin and from  the database.
+	  ****************************************************************************************************************************/ 
+	
+	
 	//authentication service
 	@Override
 	public Admin authAdmin(long id, String pass) {
